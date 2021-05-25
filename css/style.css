@@ -1,59 +1,130 @@
 #header {
-  background: #171D3A;
-  color: white;
+  background: red;
+  border-bottom: 20px solid green;
+  color: blue;
   font-family: sans-serif;
-  font-size: 200px;
+  font-size: 30px;
   flex: auto;
   height: auto;
-  padding: 1px;
+  padding: 10px;
   text-align: center;
   width: auto;
 }
 
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #171D3A;
-}
-
-li {
+#navbar {
+  background: deeppink;
+  border: 20px solid purple;
+  border-radius: 40px;
   float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
-  text-decoration: none;
-  font-size: 25px;
-  margin-top: 120px;
-  margin-bottom: 45px;
-}
-
-li a:hover {
-  background-color: #E5FDFC;
-  color: #171D3A;
-}
-h2 {
-  font-size: 40px;
-  text-align: center;
-}
-
-p {
+  font-family: sans-serif;
   font-size: 20px;
+  overflow: hidden;
+  text-align: center;
+  width:auto;
+}
+
+#navbar a {
+  background: blue;
+  border-right: 200px solid white;
+  float:left;
+  display: block;
+  color: yellow;
+  text-align: center;
+  padding: 140px 200px;
+  text-decoration: none;
+}
+
+#navbar a.left {
+  float: left;
+}
+
+#navbar a.right {
+  background: orange;
+  border-right: none;
+  color: pink;
+  float: right;
+}
+
+#navbar a:hover {
+  background-color: purple;
+  color: white;
+}
+
+#navbar a.right:hover {
+  background-color: lightblue;
+  border-left: 200px solid brown;
+  color: purple;
+}
+
+#row {
+  display: flex;
+  font-family: sans-serif;
+  flex-wrap: wrap;
+  height: auto;
+  width: auto;
+}
+
+#main {
+  background: brown;
+  border-bottom: 100px solid deeppink;
+  color: black;
+  flex: 2.5;
+  order: 2;
+  padding: 200px;
+  width: 70%;
+}
+
+#maintext {
+  background: lightblue;
+  border-bottom: 100px solid black;
+  color: white;
+  flex: 2.5;
+  order: 2;
+  padding: 300px;
+  width: 70%;
+}
+
+#side {
+  background: lightgreen;
+  border-bottom: 100px solid blue;
+  color: black;
+  flex: 5.5;
+  order: 1;
+  padding: 200px;
+  width: 30%;
+}
+
+#footer {
+  background: green;
+  color: black;
+  display: flex;
+  font-family: sans-serif;
+  flex: auto;
+}
+
+#left {
+  background: yellow;
+  display: block;
+  flex: auto;
+  font-family: sans-serif;
+  order: 1;
+  text-align: left;
+}
+
+#middle {
+  background: green;
+  display: block;
+  flex: auto;
+  font-family: sans-serif;
+  order: 2;
   text-align: center;
 }
 
-.leftnav {
-  width: 165px;
-  float: left;
-  display: inline;
-  margin: 0;
-  padding: 0;
-  margin-right: 10px;
-  vertical-align: left;
+#right {
+  background: blue;
+  display: block;
+  flex: auto;
+  font-family: sans-serif;
+  text-align: right;
+  order: 3;
 }
