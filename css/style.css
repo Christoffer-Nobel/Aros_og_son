@@ -1,9 +1,22 @@
+#header {
+  background: #171D3A;
+  color: white;
+  font-family: sans-serif;
+  font-size: 30px;
+  flex: auto;
+  height: auto;
+  padding: 1px;
+  text-align: center;
+  width: auto;
+}
+
+
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333333;
+  background-color: #171D3A;
 }
 
 li {
@@ -22,7 +35,8 @@ li a {
 }
 
 li a:hover {
-  background-color: #111111;
+  background-color: #E5FDFC;
+  color: #171D3A;
 }
 h2 {
   font-size: 40px;
@@ -44,11 +58,10 @@ p {
 }
 
 .leftnav {
-  width: 150px;
+  width: 165px;
   float: left;
   display: inline;
   margin: 0;
   padding: 0;
   margin-right: 10px;
-
 }

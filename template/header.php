@@ -6,8 +6,10 @@
     <title></title>
   </head>
   <body>
+    <div id="header">
     <link rel="stylesheet" href="css/style.css">
     <header>
+      <div id="navbar">
       <nav class="topnav">
         <div class="leftnav">
           <ul>
