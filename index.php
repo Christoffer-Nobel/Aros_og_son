@@ -7,7 +7,6 @@ define("DBNAME", "aros_og_son");
 
 include("functions.php");
 
-
 connect();
 
 if(isset($_GET["p"])) {
