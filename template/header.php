@@ -9,7 +9,7 @@
   <body>
     <div id="header">
       <h6>header</h6>
-      <img src="pokemon.jpg" align="left">
+      <img src="css/pictures/tihi.jpg" align="left">
     <header>
       </div>
     <div id="navbar">
