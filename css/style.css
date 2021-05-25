@@ -1,130 +1,97 @@
 #header {
-  background: red;
-  border-bottom: 20px solid green;
-  color: blue;
+  background: #171D3A;
+  color: white;
   font-family: sans-serif;
   font-size: 30px;
   flex: auto;
   height: auto;
-  padding: 10px;
+  padding: 1px;
   text-align: center;
   width: auto;
 }
 
-#navbar {
-  background: deeppink;
-  border: 20px solid purple;
-  border-radius: 40px;
-  float: left;
-  font-family: sans-serif;
-  font-size: 20px;
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
-  text-align: center;
-  width:auto;
+  background-color: #171D3A;
 }
 
-#navbar a {
-  background: blue;
-  border-right: 200px solid white;
-  float:left;
-  display: block;
-  color: yellow;
-  text-align: center;
-  padding: 140px 200px;
-  text-decoration: none;
-}
-
-#navbar a.left {
+li {
   float: left;
 }
 
-#navbar a.right {
-  background: orange;
-  border-right: none;
-  color: pink;
-  float: right;
-}
-
-#navbar a:hover {
-  background-color: purple;
-  color: white;
-}
-
-#navbar a.right:hover {
-  background-color: lightblue;
-  border-left: 200px solid brown;
-  color: purple;
-}
-
-#row {
-  display: flex;
-  font-family: sans-serif;
-  flex-wrap: wrap;
-  height: auto;
-  width: auto;
-}
-
-#main {
-  background: brown;
-  border-bottom: 100px solid deeppink;
-  color: black;
-  flex: 2.5;
-  order: 2;
-  padding: 200px;
-  width: 70%;
-}
-
-#maintext {
-  background: lightblue;
-  border-bottom: 100px solid black;
-  color: white;
-  flex: 2.5;
-  order: 2;
-  padding: 300px;
-  width: 70%;
-}
-
-#side {
-  background: lightgreen;
-  border-bottom: 100px solid blue;
-  color: black;
-  flex: 5.5;
-  order: 1;
-  padding: 200px;
-  width: 30%;
-}
-
-#footer {
-  background: green;
-  color: black;
-  display: flex;
-  font-family: sans-serif;
-  flex: auto;
-}
-
-#left {
-  background: yellow;
+li a {
   display: block;
-  flex: auto;
-  font-family: sans-serif;
-  order: 1;
-  text-align: left;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  font-size: 25px;
+  margin-top: 120px;
+  margin-bottom: 45px;
 }
 
-#middle {
-  background: green;
-  display: block;
-  flex: auto;
-  font-family: sans-serif;
-  order: 2;
+li a:hover {
+  background-color: #E5FDFC;
+  color: #171D3A;
+}
+h2 {
+  font-size: 40px;
   text-align: center;
 }
 
-#right {
-  background: blue;
+p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.leftnav {
+  width: 165px;
+  float: left;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
+  vertical-align: left;
+}
+
+#Login{
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+background: black;
+}
+.box{
+width: 64%;
+padding: 18%;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+background: #171D3A;
+text-align: center;
+}
+.box h1{
+  color: white;
+  text-transform: uppercase;
+  front-weight: 500;
+}
+.box input[type = "text"],.box input[type = "Kodeord"] {
+  border:0;
+  background: none;
   display: block;
-  flex: auto;
-  font-family: sans-serif;
-  text-align: right;
-  order: 3;
+  margin: 20px auto;
+  text-allign: center;
+  border: 2px solid white;
+  padding: 13px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+
+
 }
