@@ -11,4 +11,5 @@ define("DBPASS", "root");
 define("DBNAME", "aros_og_son");
 
 connect();
+
  ?>
