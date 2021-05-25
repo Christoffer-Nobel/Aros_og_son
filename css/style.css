@@ -1,101 +1,68 @@
 #header {
-  background: red;
-  border-bottom: 20px solid green;
-  color: blue;
+  background: #171D3A;
+  border-top: #171D3A;
+  color: white;
   font-family: sans-serif;
   font-size: 30px;
   flex: auto;
   height: auto;
   padding: 10px;
-  text-align: center;
+  text-align: right;
   width: auto;
+  display: flex;
+}
+
+#image {
+  width:106px;
+  margin-top: 1px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 1px;
+}
+
+#page {
+  background: #171D3A;
+  display: flex;
+  flex-direction: row;
 }
 
 #navbar {
-  background: deeppink;
-  border: 20px solid purple;
-  border-radius: 40px;
-  float: left;
+  display: block;
   font-family: sans-serif;
   font-size: 20px;
-  overflow: hidden;
+  flex: 1,5;
+  order: 1;
   text-align: center;
   width:auto;
+  list-style-type:none;
 }
 
 #navbar a {
-  background: blue;
-  border-right: 200px solid white;
-  float:left;
   display: block;
-  color: yellow;
+  color: white;
   text-align: center;
-  padding: 140px 200px;
+  padding: 10px 20px;
   text-decoration: none;
-}
-
-#navbar a.left {
-  float: left;
-}
-
-#navbar a.right {
-  background: orange;
-  border-right: none;
-  color: pink;
-  float: right;
+  padding-bottom: 46px;
+  padding-top: 45px;
 }
 
 #navbar a:hover {
-  background-color: purple;
-  color: white;
-}
-
-#navbar a.right:hover {
-  background-color: lightblue;
-  border-left: 200px solid brown;
-  color: purple;
-}
-
-#row {
-  display: flex;
-  font-family: sans-serif;
-  flex-wrap: wrap;
-  height: auto;
-  width: auto;
-}
-
-#main {
-  background: brown;
-  border-bottom: 100px solid deeppink;
-  color: black;
-  flex: 2.5;
-  order: 2;
-  padding: 200px;
-  width: 70%;
-}
-
-#maintext {
-  background: lightblue;
-  border-bottom: 100px solid black;
-  color: white;
-  flex: 2.5;
-  order: 2;
-  padding: 300px;
-  width: 70%;
+  background-color: #E5FDFC;
+  color: #171D3A;
 }
 
 #side {
-  background: lightgreen;
-  border-bottom: 100px solid blue;
+  background: #E5FDFC;
   color: black;
+  display: block;
   flex: 5.5;
-  order: 1;
-  padding: 200px;
-  width: 30%;
+  order: 2;
+  width: auto;
 }
 
 #footer {
-  background: green;
+  background: #E5FDFC;
   color: black;
   display: flex;
   font-family: sans-serif;
@@ -103,7 +70,7 @@
 }
 
 #left {
-  background: yellow;
+  background: #E5FDFC;
   display: block;
   flex: auto;
   font-family: sans-serif;
@@ -112,7 +79,7 @@
 }
 
 #middle {
-  background: green;
+  background: #E5FDFC;
   display: block;
   flex: auto;
   font-family: sans-serif;
@@ -121,10 +88,31 @@
 }
 
 #right {
-  background: blue;
+  background: #E5FDFC;
   display: block;
   flex: auto;
   font-family: sans-serif;
   text-align: right;
   order: 3;
+}
+
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: purple;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
 }
