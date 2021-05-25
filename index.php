@@ -1,4 +1,5 @@
 <?php
+include("./functions.php");
 include("./layout/header.php");
 include("./layout/nav.php");
 include("./layout/footer.php");
@@ -7,6 +8,7 @@ include("./layout/footer.php");
 define("DBHOST", "localhost");
 define("DBUSER", "root");
 define("DBPASS", "root");
-define("DBNAME", "okitcms");
+define("DBNAME", "aros_og_son");
 
+connect();
  ?>
