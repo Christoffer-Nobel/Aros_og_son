@@ -72,15 +72,11 @@
 #left {
   background: #E5FDFC;
   display: block;
-  margin: 20px auto;
-  text-allign: center;
-  border: 2px solid white;
-  padding: 13px 10px;
-  width: 200px;
-  outline: none;
-  color: white;
-  border-radius: 24px;
-  transition: 0.25s;
+  flex: auto;
+  font-family: sans-serif;
+  order: 1;
+  text-align: left;
+}
 
 #middle {
   background: #E5FDFC;
@@ -120,3 +116,39 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #171D3A;
+}
+
+#Login{
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+background: black;
+}
+
+.box{
+width: 64%;
+padding: 18%;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+background: #171D3A;
+text-align: center;
+}
+
+.box h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+
+}
+.box input[type = "text"],.box input[type = "Kodeord"] {
+  border:0;
+  background: none;

@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="header">
-      <h6>header</h6>
+      <h4>Aros & Søn ApS</h4>
       <img src class="img-logo"="css/pictures/tihi.jpg" align="left">
     <header>
       </div>
