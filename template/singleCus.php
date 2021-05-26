@@ -32,8 +32,8 @@ if(mysqli_num_rows($result) > 0){
 
 <h2> Noter til kunde: </h2>
 <form action="template/singleCus.inc.php" method="post">
-<textarea>Skriv note her</textarea>
-<input type="submit" name="note" value="Tilføj note">
+<input type="textarea" name="notetext">
+<input type="submit" value="Tilføj note">
 </form>
 
 
