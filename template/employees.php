@@ -10,13 +10,13 @@
       <th>Teams link</th>
     </tr>
     <?php
-    $sql = "SELECT * FROM employeelist"; //You don't need a ; like you do in SQL
+    $sql = "SELECT * FROM employeelist";
     global $conn;
     $result = mysqli_query($conn, $sql);
 
-    echo "<table>"; // start a table tag in the HTML
+    echo "<table>";
 
-    while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
+    while($row = mysqli_fetch_array($result)){   
     echo "<tr><td>" . $row['e_firstname'] . " " . $row['e_lastname'] . "</td><td>" . $row['department_name'] . "</td><td>" . $row['e_email'] . "</td><td>" . $row['local_number'] . "</td><td>" . $row['teamsid'] . "</td></tr>";
     }
 
