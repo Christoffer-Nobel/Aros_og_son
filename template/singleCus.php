@@ -39,6 +39,22 @@ if(mysqli_num_rows($result) > 0){
 </form>
 <?php
 
+$sql = "SELECT * from customernotes where customer_id = '$pid'";
+
+$result = mysqli_query($conn, $sql);
+$notes = [];
+if(mysqli_num_rows($result) > 0){
+  while($row = mysqli_fetch_assoc($result)){
+    $notes[] = $row;
+  }
+
+foreach ($notes as $singleNote) {
+  echo $singleNote["created_at"];
+  ?><br> <?php
+  echo $singleNote["note_text"];
+    ?><br> <?php  ?><br> <?php
+}
+}
 if(isset($_POST['notetext'])){
   $note = $_POST['notetext'];
   $cusId = $cus[0]["customer_id"];
