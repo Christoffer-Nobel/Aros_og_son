@@ -2,7 +2,7 @@
 
 define("DBHOST", "localhost");
 define("DBUSER", "root");
-define("DBPASS", "root");
+define("DBPASS", "");
 define("DBNAME", "aros_og_son");
 
 include("functions.php");

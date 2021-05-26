@@ -25,7 +25,7 @@
                     </a>
                   </li>
                 <?php } ?>
-                <a href="./comingsoon.php">Salg</a>
-                <a href="./comingsoon.php">Opgaver</a>
+                <a href="comingsoon.php">Salg</a>
+                <a href="comingsoon.php">Opgaver</a>
               </div>
       <div id="side">
