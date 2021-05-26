@@ -2,7 +2,7 @@
   background: #171D3A;
   border-top: #171D3A;
   color: white;
-  font-family: sans-serif;
+  font-weight: 500;
   font-size: 30px;
   flex: auto;
   height: auto;
@@ -15,7 +15,7 @@
 #image {
   width:106px;
   margin-top: 1px;
-  margin-left: 25px;
+  margin-left: 37px;
   margin-right: 25px;
   margin-bottom: 1px;
 }
@@ -24,7 +24,7 @@
   background: #171D3A;
   color: white;
   height: auto;
-  margin-left: auto;
+  margin-left: 25px;
   margin-right: auto;
   text-decoration: none;
   width: 80px;
@@ -33,7 +33,7 @@
 #logout {
   background: #171D3A;
   flex: auto;
-  font-family: sans-serif;
+  font-weight: 500;
   text-align: right;
   order: 1;
   font-size: 20px;
@@ -45,10 +45,10 @@
 #logoutright {
   background: #171D3A;
   flex: auto;
-  font-family: sans-serif;
+  font-weight: 500;
   text-align: right;
   order: 2;
-    padding-top: 1px;
+  padding-top: 1px;
 }
 
 #page {
@@ -59,8 +59,8 @@
 
 #navbar {
   display: block;
-  font-family: sans-serif;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 22px;
   flex: 1,5;
   order: 1;
   text-align: center;
@@ -72,7 +72,7 @@
   display: block;
   color: white;
   text-align: center;
-  padding: 10px 20px;
+  padding: 27px 27px;
   text-decoration: none;
   padding-bottom: 46px;
   padding-top: 45px;
@@ -96,7 +96,7 @@
   background: #E5FDFC;
   color: black;
   display: flex;
-  font-family: sans-serif;
+  font-weight: 500;
   flex: auto;
 }
 
@@ -104,17 +104,17 @@
   background: #171D3A;
   color: white;
   display: block;
-  font-family: sans-serif;
+  font-weight: 500;
   order: 1;
   text-align: left;
-  width: 156px;
+  width: 169px;
 }
 
 #middle {
   background: #E5FDFC;
   display: block;
   flex: auto;
-  font-family: sans-serif;
+  font-weight: 500;
   order: 2;
   text-align: center;
   width: 1500px;
@@ -124,9 +124,10 @@
   background: #E5FDFC;
   display: block;
   flex: auto;
-  font-family: sans-serif;
+  font-weight: 500;
   text-align: right;
   order: 3;
+  margin-right: 25px;
 }
 
 .lefthover:hover {
@@ -159,14 +160,7 @@ a:active {
   text-decoration: underline;
 }
 
-#Login{
-margin: 0;
-padding: 0;
-font-family: sans-serif;
-background: black;
-}
-
-.box{
+#box {
 width: 64%;
 padding: 18%;
 position: absolute;
@@ -177,12 +171,53 @@ background: #171D3A;
 text-align: center;
 }
 
-.box h1{
+#box h1 {
   color: white;
   text-transform: uppercase;
   font-weight: 500;
-
 }
-.box input[type = "text"],.box input[type = "Kodeord"] {
+
+#box input[type = "text"],#box input[type = "Kodeord"] {
   border:0;
-  background: none;
+  background: #E5FDFC;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid white;
+  padding: 13px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  color: #171D3A;
+}
+
+#box input[type = "submit"] {
+  background: #171D3A;
+  border-radius: 24px;
+  border: 2px solid white;
+  color: white;
+  margin: 20px auto;
+  padding: 13px 10px;
+  width: 120px;
+  text-align: center;
+  font-size: 20px;
+}
+
+#nybruger {
+  background: #171D3A;
+  display: block;
+  margin: 20px auto;
+  border: 2px solid white;
+  padding: 8px;
+  width: 100px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  font-weight: 500;
+  background-color: transparent;
+  font-size: 12px;
+  text-decoration: none;
+  font-family: sans-serif;
+}
