@@ -37,8 +37,8 @@ connect();
           $oldpass = $_POST['oldpassword'];
           $oldhashpass = hash('ripemd160', $oldpass);
           $pass = $_POST['newpassword'];
-          $repeatpass = $_POST['repeatpassword'];
           $newpass = hash('ripemd160', $pass);
+          $repeatpass = $_POST['repeatpassword'];
 
         $sql = "SELECT * FROM employees";
         global $conn;
