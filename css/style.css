@@ -72,11 +72,15 @@
 #left {
   background: #E5FDFC;
   display: block;
-  flex: auto;
-  font-family: sans-serif;
-  order: 1;
-  text-align: left;
-}
+  margin: 20px auto;
+  text-allign: center;
+  border: 2px solid white;
+  padding: 13px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
 
 #middle {
   background: #E5FDFC;
