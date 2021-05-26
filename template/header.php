@@ -4,8 +4,8 @@
   <head>
     <meta charset="utf-8">
     <title>Forside</title>
-        <link rel="stylesheet" href="../css/style.css">
-    <img id="image" src="../css/logo.png" align="left">
+        <link rel="stylesheet" href="./css/style.css">
+    <img id="image" src="./css/logo.png" align="left">
   </head>
   <body>
     <div id="header">
