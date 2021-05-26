@@ -21,19 +21,23 @@ connect();
   </head>
   <body>
     <form id="box" method="post">
-      <h1>Login</h1>
+      <h1>Ændre Adgangskode</h1>
         <input type="email" name="email" placeholder="E-mail" required><br>
-        <input type="password" name="password" placeholder="Kodeord" required><br>
-        <input type="submit" name="btnlogin" value="Login">
-      <a id="nybruger" href="./newPassword.php">Ændre adgangskode</a>
+        <input type="password" name="oldpassword" placeholder="Gammel adgangskode" required><br>
+        <input type="password" name="newpassword" placeholder="Ny adgangskode" required> <br>
+        <input type="password" name="repeatpassword" placeholder="Gentag ny adgangskode" required> <br>
+        <input type="submit" name="btnlogin" value="Opdater bruger">
+      <a id="nybruger" href="./login.php">Tilbage til Login</a>
 
 <?php
       if(isset($_POST['btnlogin']))
       {
       //sætter den indskrevne email og password i en variabel
           $uname = $_POST['email'];
-          $pass = $_POST['password'];
-        //  $password = hash('ripemd160' $pass);
+          $oldpass = $_POST['oldpassword'];
+          $newpass = $_POST['newpassword'];
+          $repeatpass = $_POST['repeatpassword'];
+          //  $password = hash('ripemd160' $½pass);
 
         $sql = "SELECT * FROM employees";
         global $conn;
@@ -47,21 +51,26 @@ connect();
           }
 
             for($i = 0; $i < count($users); $i++){
+              $empid = $users[$i]['employee_id'];
       //tjekker om det indskrevne email og password med vores hash passer med samme data fra hver bruger i vores array indtil den finder et match, og sætter her en variabel til velkommen, og en variabel til brugerens navn
-              if($users[$i]['e_email'] == $uname && $users[$i]['password'] == $pass)
+              if($users[$i]['e_email'] == $uname && $users[$i]['password'] == $oldpass && $newpass == $repeatpass)
               {
-                header("Location: ../index.php?p=1");
+                $sql = "UPDATE employees SET password = '$newpass' WHERE employee_id = $empid;";
+                $result = mysqli_query($conn, $sql);
+                if (false===$result) {
+                  printf(mysqli_error($conn));
+                }
 
+                $name = $users[$i]["e_firstname"] . " " .  $users[$i]["e_lastname"];
+                  $msg = "Adgangskode til " . $name . " er opdateret til";
                   break;
-              }
       //Hvis den ikke finder et match sættes en variabel, til "forkert" og variblen med navn til ingenting
-              else
+    }else
               {
-                 $msg = "<p>Forkert brugernavn eller adgangskode</p>";
-                 $name = null;
+                 $msg = "<p>Kunne ikke opdatere bruger. Prøv igen =)</p>";
               }
           }
-          echo $msg . $name;
+          echo $msg;
         }
 ?>
 
