@@ -35,9 +35,10 @@ connect();
       //sætter den indskrevne email og password i en variabel
           $uname = $_POST['email'];
           $oldpass = $_POST['oldpassword'];
-          $newpass = $_POST['newpassword'];
+          $oldhashpass = hash('ripemd160', $oldpass);
+          $pass = $_POST['newpassword'];
           $repeatpass = $_POST['repeatpassword'];
-          //  $password = hash('ripemd160' $½pass);
+          $newpass = hash('ripemd160', $pass);
 
         $sql = "SELECT * FROM employees";
         global $conn;
@@ -53,7 +54,7 @@ connect();
             for($i = 0; $i < count($users); $i++){
               $empid = $users[$i]['employee_id'];
       //tjekker om det indskrevne email og password med vores hash passer med samme data fra hver bruger i vores array indtil den finder et match, og sætter her en variabel til velkommen, og en variabel til brugerens navn
-              if($users[$i]['e_email'] == $uname && $users[$i]['password'] == $oldpass && $newpass == $repeatpass)
+              if($users[$i]['e_email'] == $uname && $users[$i]['password'] == $oldpass && $pass == $repeatpass or $users[$i]['e_email'] == $uname && $users[$i]['password'] == $oldhashpass && $pass == $repeatpass)
               {
                 $sql = "UPDATE employees SET password = '$newpass' WHERE employee_id = $empid;";
                 $result = mysqli_query($conn, $sql);

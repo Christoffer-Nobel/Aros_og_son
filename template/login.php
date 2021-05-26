@@ -32,8 +32,8 @@ connect();
       {
       //sætter den indskrevne email og password i en variabel
           $uname = $_POST['email'];
-          $pass = $_POST['password'];
-        //  $password = hash('ripemd160' $pass);
+          $password = $_POST['password'];
+         $pass = hash('ripemd160', $password);
 
         $sql = "SELECT * FROM employees";
         global $conn;
