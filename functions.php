@@ -35,9 +35,7 @@ function getCusPage($pid = null) {
   global $conn;
 
   if($pid != null) {
-    $sql = 'SELECT * FROM pages WHERE id = "'. $pid . '"';
-  } else {
-    $sql = 'SELECT * FROM pages WHERE frontpage = 1';
+    $sql = 'SELECT * FROM pages WHERE id = 6';
   }
 
   $page = mysqli_query($conn, $sql);
