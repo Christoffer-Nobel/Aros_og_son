@@ -15,8 +15,9 @@ $result = mysqli_query($conn, $sql);
 
 echo "<table>"; // start a table tag in the HTML
 
-while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
-echo "<tr><td>" . $row['firstname'] . " " . $row['lastname'] . "</td><td>" . $row['company_name'] . "</td><td>" . $row['email'] . "</td><td>" . $row['phone_number'] . "</td></tr>";  //$row['index'] the index here is a field name
+while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results?>
+<tr><td><a href='template/login.php'>Vis mere</a> <?php  
+echo "<td>" . $row['firstname'] . " " . $row['lastname'] . "</td><td>" . $row['company_name'] . "</td><td>" . $row['email'] . "</td><td>" . $row['phone_number'] . "</td></tr>";  //$row['index'] the index here is a field name
 }
 
 echo "</table>"; //Close the table in HTML
