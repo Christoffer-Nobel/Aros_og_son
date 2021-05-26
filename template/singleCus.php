@@ -31,7 +31,7 @@ if(mysqli_num_rows($result) > 0){
   ?> </h3>
 
 <h2> Noter til kunde: </h2>
-<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+<form action="template/singleCus.inc.php" method="post">
 <textarea>Skriv note her</textarea>
 <input type="submit" name="note" value="Tilføj note">
 </form>
