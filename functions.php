@@ -34,7 +34,7 @@ function getPage($pid = null) {
 function getNav() {
   global $conn;
 
-  $sql = 'SELECT id, title FROM pages';
+  $sql = 'SELECT id, title FROM pages WHERE id < 5';
   $result = mysqli_query($conn, $sql);
   $nav = [];
 
