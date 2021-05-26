@@ -17,4 +17,4 @@ if (false===$result) {
   printf(mysqli_error($conn));
 }
 
-header("Location: ../index.php?p=2");
+//header("Location: ../index.php?p=2");

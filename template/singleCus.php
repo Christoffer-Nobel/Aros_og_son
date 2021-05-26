@@ -11,6 +11,8 @@ if(mysqli_num_rows($result) > 0){
     $cus[] = $row;
 }
 }
+
+
 ?>
 
 <body>
@@ -31,12 +33,25 @@ if(mysqli_num_rows($result) > 0){
   ?> </h3>
 
 <h2> Noter til kunde: </h2>
-<form action="template/singleCus.inc.php" method="post">
+<form method="post">
 <input type="textarea" name="notetext">
 <input type="submit" value="Tilføj note">
 </form>
+<?php
 
+if(isset($_POST['notetext'])){
+  $note = $_POST['notetext'];
+  $cusId = $cus[0]["customer_id"];
 
+  $sql = "INSERT INTO note (note_text, customer_id) VALUES ('$note', '$cusId');";
+  $result = mysqli_query($conn, $sql);
+  if (false===$result) {
+    printf(mysqli_error($conn));
+  }
+  header("Location: ./index.php?p=2");
+
+}
+?>
 </body>
 </html>
 
