@@ -12,7 +12,7 @@ global $conn;
 </form>
 
 <?php
-$sql = "SELECT * from employeeposts where employee_id > 0";
+$sql = "SELECT * from employeeposts where employee_id > 0 ORDER BY created_at DESC;";
 
 $result = mysqli_query($conn, $sql);
 $posts = [];
@@ -34,7 +34,7 @@ if(isset($_POST['makepost'])){
   $title = $_POST['title'];
   $bulletboard_text = $_POST['posttext'];
 
-  $sql = "INSERT INTO note (employee_id, title, bulletboard_text) VALUES ('$empid', '$title', '$bulletboard_text');";
+  $sql = "INSERT INTO bulletboard (employee_id, title, bulletboard_text) VALUES ('$empid', '$title', '$bulletboard_text');";
   $result = mysqli_query($conn, $sql);
   if (false===$result) {
     printf(mysqli_error($conn));

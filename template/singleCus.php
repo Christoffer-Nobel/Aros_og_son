@@ -40,7 +40,7 @@ if(mysqli_num_rows($result) > 0){
 
 <?php
 
-$sql = "SELECT * from customernotes where customer_id = '$pid'";
+$sql = "SELECT * from customernotes where customer_id = '$pid' ORDER BY created_at DESC" ;
 
 $result = mysqli_query($conn, $sql);
 $notes = [];

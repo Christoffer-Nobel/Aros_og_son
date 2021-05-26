@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="header">
-      <h4><a href="index.php" id="logo">Aros & Søn ApS</a></h4>
+      <h4><a href="index.php?p=1" id="logo">Aros & Søn ApS</a></h4>
       <div id="logoutright">
       <h4><a class="lefthover" href="template/login.php" id="logout">Log ud</a></h4>
         </div>
@@ -25,7 +25,7 @@
                     </a>
                   </li>
                 <?php } ?>
-                <a href="404.php">Salg</a>
-                <a href="404.php">Opgaver</a>
+                <a href="./index.php?p=7">Salg</a>
+                <a href="./index.php?p=8">Opgaver</a>
               </div>
       <div id="side">
