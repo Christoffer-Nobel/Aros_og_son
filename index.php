@@ -11,6 +11,8 @@ connect();
 
 if(isset($_GET["p"])) {
   $page = getPage($_GET["p"]);
+} elseif(isset($_GET["t"])){
+  $page = "?p=6" . getCusPage($_GET["t"]);
 } else {
   $page = getPage();
 }
