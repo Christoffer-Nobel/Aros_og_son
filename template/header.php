@@ -3,18 +3,21 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Homepage</title>
+    <title>Forside</title>
         <link rel="stylesheet" href="css/style.css">
     <img id="image" src="css/logo.png" align="left">
   </head>
   <body>
     <div id="header">
-      <h4>Aros & Søn ApS</h4>
-      <img src class="img-logo"="css/pictures/tihi.jpg" align="left">
+      <h4><a href="index.php" id="logo">Aros & Søn ApS</a></h4>
+      <div id="logoutright">
+      <h4><a class="lefthover" href="template/login.php" id="logout">Log ud</a></h4>
+        </div>
+      </div>
     <header>
       </div>
-      <div id="page">
-      <div id="navbar">
+    <div id="page">
+    <div id="navbar">
                   <?php foreach(getNav() as $nav) { ?>
                   <li>
                     <a href="?p=<?php echo $nav['id']; ?>">

@@ -20,6 +20,37 @@
   margin-bottom: 1px;
 }
 
+#logo {
+  background: #171D3A;
+  color: white;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  width: 80px;
+  }
+
+#logout {
+  background: #171D3A;
+  flex: auto;
+  font-family: sans-serif;
+  text-align: right;
+  order: 1;
+  font-size: 20px;
+  margin-top: 1px;
+  margin-left: 1px;
+  margin-right: 25px;
+}
+
+#logoutright {
+  background: #171D3A;
+  flex: auto;
+  font-family: sans-serif;
+  text-align: right;
+  order: 2;
+    padding-top: 1px;
+}
+
 #page {
   background: #171D3A;
   display: flex;
@@ -70,12 +101,13 @@
 }
 
 #left {
-  background: #E5FDFC;
+  background: #171D3A;
+  color: white;
   display: block;
-  flex: auto;
   font-family: sans-serif;
   order: 1;
   text-align: left;
+  width: 156px;
 }
 
 #middle {
@@ -85,6 +117,7 @@
   font-family: sans-serif;
   order: 2;
   text-align: center;
+  width: 1500px;
 }
 
 #right {
@@ -96,33 +129,34 @@
   order: 3;
 }
 
+.lefthover:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
 a:link {
   color: black;
   background-color: transparent;
   text-decoration: none;
 }
+
 a:visited {
-  color: black;
+  color: white;
   background-color: transparent;
   text-decoration: none;
 }
+
 a:hover {
-  color: purple;
-  background-color: transparent;
-  text-decoration: underline;
-}
-a:active {
   color: black;
   background-color: transparent;
   text-decoration: underline;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #171D3A;
+a:active {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 #Login{

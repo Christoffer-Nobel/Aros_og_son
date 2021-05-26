@@ -3,7 +3,7 @@
 </div>
 <div id="footer">
   <div id="left">
-      <h6><a href="https://www.google.com/maps/place/Seebladsgade+1,+5000+Odense/@55.4035443,10.3776725,17z/data=!4m5!3m4!1s0x464cdffcfcc4e6a1:0xd5ca23165eb2230f!8m2!3d55.4035443!4d10.3798612">Aros & Søn ApS</a></h6>
+      <h6><a class="lefthover" href="https://www.google.com/maps/place/Seebladsgade+1,+5000+Odense/@55.4035443,10.3776725,17z/data=!4m5!3m4!1s0x464cdffcfcc4e6a1:0xd5ca23165eb2230f!8m2!3d55.4035443!4d10.3798612">Aros & Søn ApS</a></h6>
       <h6>Seebladsgade 1</h6>
       <h6>5000 Odense C</h6></div>
       <div id="middle"><h6>Kontakt</h6>
