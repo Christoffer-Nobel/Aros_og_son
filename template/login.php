@@ -7,7 +7,7 @@
     <title>Login</title>
     <div id="Login">
     </div>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
     <form id="box" action="default.php" method="post">
