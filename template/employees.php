@@ -7,6 +7,7 @@
       <th>Afdeling</th>
       <th>E-mail</th>
       <th>Lokal  nummer</th>
+      <th>Teams link</th>
     </tr>
     <?php
     $sql = "SELECT * FROM employeelist"; //You don't need a ; like you do in SQL
@@ -16,7 +17,7 @@
     echo "<table>"; // start a table tag in the HTML
 
     while($row = mysqli_fetch_array($result)){   //Creates a loop to loop through results
-    echo "<tr><td>" . $row['e_firstname'] . " " . $row['e_lastname'] . "</td><td>" . $row['department_name'] . "</td><td>" . $row['e_email'] . "</td><td>" . $row['local_number'] . "</td></tr>";  //$row['index'] the index here is a field name
+    echo "<tr><td>" . $row['e_firstname'] . " " . $row['e_lastname'] . "</td><td>" . $row['department_name'] . "</td><td>" . $row['e_email'] . "</td><td>" . $row['local_number'] . "</td><td>" . $row['teamsid'] . "</td></tr>";  //$row['index'] the index here is a field name
     }
 
     echo "</table>"; //Close the table in HTML
