@@ -240,12 +240,15 @@ table {
     margin: 0 auto;
     font-size: large;
     border: 1px solid black;
+    background: #171D3A;
+    color: white;
 }
 
 td {
-    background-color: #E4F5D4;
+    background-color: #E5FDFC;
     border: 1px solid black;
     width: 25% ;
+    color: #171D3A;
 }
 
 th, td {
