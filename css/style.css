@@ -242,6 +242,7 @@ table {
     border: 1px solid black;
     background: #171D3A;
     color: white;
+    margin-left: 2px;
 }
 
 td {
@@ -261,3 +262,7 @@ th, td {
 td {
     font-weight: lighter;
 }
+ #navnlink {
+   color: #171D3A;
+   text-decoration: none;
+ }
