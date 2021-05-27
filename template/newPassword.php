@@ -68,12 +68,11 @@ connect();
       //Hvis den ikke finder et match sættes en variabel, til "forkert" og variblen med navn til ingenting
     }else
               {
-                 $msg = "<p>Kunne ikke opdatere bruger. Prøv igen =)</p>";
+                 $msg = "Kunne ikke opdatere bruger. Prøv igen.";
               }
           }
-          echo $msg;
-        }
-?>
-
+          ?> <p id="message"> <?php  echo $msg?></p><?PHP
+          }
+  ?>
   </body>
 </html>

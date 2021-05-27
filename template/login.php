@@ -53,13 +53,13 @@ connect();
       //Hvis den ikke finder et match sættes en variabel, til "forkert" og variblen med navn til ingenting
               else
               {
-                 $msg = "<p>Forkert brugernavn eller adgangskode</p>";
+                 $msg = "Forkert brugernavn eller adgangskode";
                  $name = null;
               }
           }
-          echo $msg . $name;
+        ?> <p id="message"> <?php  echo $msg . $name; ?></p><?PHP
         }
 ?>
 
-  </body>
+</body>
 </html>
