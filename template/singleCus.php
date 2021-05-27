@@ -69,32 +69,12 @@ if(isset($_POST['notetext'])){
 
 }
 ?>
-<?php
-$test = 1;
-if(isset($_POST['upload'])){
-  file_put_contents($_POST['filename']);
-  $name = $_FILES['file']['name'];
-  $type = $_FILES['file']['type'];
-  $data = file_get_contents($_FILES['file']['tmp_name']);
-  $stmt = $conn->prepare("insert into file (name, mime, data) values('',?,?,?,'',?)");
-  $stmt->bindParam(1,$name);
-  $stmt->bindParam(2,$type);
-  $stmt->bindParam(3,$data);
-  $stmt->bindParam(4,$test);
-  $stmt->execute();
-
-}
- ?>
 <h2> Filer: </h2>
   <form method="post" enctype="multipart/form-data">
     <input type="text" name="filename" required>
     <input type="file" name="file" required>
     <input type="submit" value="Tilføj fil" name="upload">
   </form>
-  <?php
-
-
-  ?>
 
 </body>
 </html>
