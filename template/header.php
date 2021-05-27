@@ -11,7 +11,7 @@
     <div id="header">
       <h4><a href="index.php?p=1" id="logo">Aros & Søn ApS</a></h4>
       <div id="logoutright">
-      <h4><a class="lefthover" href="template/login.php" id="logout">Log ud</a></h4>
+      <h4><a class="lefthover" href="./index.php" id="logout">Log ud</a></h4>
         </div>
       </div>
     <header>
