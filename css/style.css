@@ -279,3 +279,34 @@ td {
 #postdate {
   font-size: 15px;
 }
+#customersingle {
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+}
+#customerinfo {
+order: 1;
+text-align: left;
+display: block;
+width: auto;
+padding: 20px;
+margin-right: 100px;
+}
+#customernotefileinput {
+order: 2;
+text-align: middle;
+display: block;
+width: auto;
+padding: 30px;
+margin-right: 100px;
+}
+#customernotes {
+  order: 3;
+  text-align: center;
+  display: block;
+  width: auto;
+  padding: 30px;
+  margin-top: 5px;
+  border-radius: auto;
+  border: 1px solid black;
+}

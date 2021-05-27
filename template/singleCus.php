@@ -1,4 +1,7 @@
 <?php include("header.php");
+?>
+<div id="customersingle">
+<?php
 global $conn;
 
 $pid = $_GET["t"];
@@ -14,7 +17,7 @@ if(mysqli_num_rows($result) > 0){
 
 
 ?>
-
+<div id="customerinfo"
 <body>
   <h1><?php echo "Navn: " . $cus[0]["firstname"] . " " . $cus[0]["lastname"]; ?></h1>
     <h2> <?php echo "Kunde nr: 0000" . $cus[0]["customer_id"];?>
@@ -27,17 +30,26 @@ if(mysqli_num_rows($result) > 0){
   <br><br>
 <?php echo "Rådgivere:" ?> <h3>
   <?php foreach($cus as $emp) {
-    echo $emp["e_firstname"];
+    echo $emp["e_firstname"] . " " . $emp["e_lastname"];
       ?> <br> <?php
   }
 ?> </h3>
-
+</div>
+<div id="customernotefileinput">
   <h2> Noter til kunde: </h2>
     <form method="post">
       <input type="textarea" name="notetext" placeholder="Indtast note her...">
       <input type="submit" value="Tilføj note">
-    </form>
 
+    <h2> Filer: </h2>
+    <form method="post" enctype="multipart/form-data">
+      <input type="text" name="filename" placeholder="Titel" required>
+      <input type="file" name="file" required>
+      <input type="submit" value="Tilføj fil" name="upload">
+    </form>
+</div>
+<div id="customernotes">
+  <h2> Noter: </h2>
 <?php
 
 $sql = "SELECT * from customernotes where customer_id = '$pid' ORDER BY created_at DESC" ;
@@ -69,13 +81,8 @@ if(isset($_POST['notetext'])){
 
 }
 ?>
-<h2> Filer: </h2>
-  <form method="post" enctype="multipart/form-data">
-    <input type="text" name="filename" placeholder="Titel" required>
-    <input type="file" name="file" required>
-    <input type="submit" value="Tilføj fil" name="upload">
-  </form>
-
+</div>
+</div>
 </body>
 </html>
 
