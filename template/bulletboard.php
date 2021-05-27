@@ -23,10 +23,10 @@ if(mysqli_num_rows($result) > 0){
 }
 ?><?php
 foreach ($posts as $post) {
-  echo $post['title']; ?> <br><a id="posttitle"> <?php
-  echo $post['e_firstname'] . " " . $post['e_lastname'] . " - " . $post['department_name']; ?> </a> <br><a id="posttext"> <?php
-  echo $post['bulletboard_text']; ?> </a><br><a id="postdate"> <?php
-  echo $post['created_at']; ?> </a><br> <?php
+  echo $post['title']; ?> <br><div id="posttitle"> <?php
+  echo $post['e_firstname'] . " " . $post['e_lastname'] . " - " . $post['department_name']; ?> </div> <br><div id="posttext"> <?php
+  echo $post['bulletboard_text']; ?> </div><br><div id="postdate"> <?php
+  echo $post['created_at']; ?> </div><br> <?php
 ?> <br><br> <?php
 }
 

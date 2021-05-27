@@ -275,6 +275,12 @@ td {
 }
 #posttext {
   font-size: 15px;
+  border: 1px solid black;
+  width: 25%;
+  margin: auto;
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px;
 }
 #postdate {
   font-size: 15px;
@@ -307,6 +313,6 @@ margin-right: 100px;
   width: auto;
   padding: 30px;
   margin-top: 5px;
-  border-radius: auto;
+  border-radius: 10px;
   border: 1px solid black;
 }
