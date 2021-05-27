@@ -27,7 +27,7 @@ connect();
         <input type="password" name="newpassword" placeholder="Ny adgangskode" required> <br>
         <input type="password" name="repeatpassword" placeholder="Gentag ny adgangskode" required> <br>
         <input type="submit" name="btnlogin" value="Opdater bruger">
-      <a id="nybruger" href="./login.php">Tilbage til Login</a>
+      <a id="nybruger" href="../index.php">Tilbage til Login</a>
 
 <?php
       if(isset($_POST['btnlogin']))

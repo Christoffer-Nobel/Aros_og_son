@@ -1,8 +1,4 @@
 <?php
-define("DBHOST", "localhost");
-define("DBUSER", "root");
-define("DBPASS", "root");
-define("DBNAME", "aros_og_son");
 
 include("../functions.php");
 
@@ -17,7 +13,7 @@ connect();
     <title>Login</title>
     <div id="Login">
     </div>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
     <form id="box" method="post">
@@ -25,7 +21,7 @@ connect();
         <input type="email" name="email" placeholder="E-mail" required><br>
         <input type="password" name="password" placeholder="Kodeord" required><br>
         <input type="submit" name="btnlogin" value="Login">
-      <a id="nybruger" href="./newPassword.php">Ændre adgangskode</a>
+      <a id="nybruger" href="./template/newPassword.php">Ændre adgangskode</a>
 
 <?php
       if(isset($_POST['btnlogin']))
@@ -50,7 +46,7 @@ connect();
       //tjekker om det indskrevne email og password med vores hash passer med samme data fra hver bruger i vores array indtil den finder et match, og sætter her en variabel til velkommen, og en variabel til brugerens navn
               if($users[$i]['e_email'] == $uname && $users[$i]['password'] == $pass)
               {
-                header("Location: ../index.php?p=1");
+                header("Location: ./index.php?p=1");
 
                   break;
               }

@@ -23,5 +23,5 @@ if($page == false) {
 } elseif($page['template'] && file_exists('template/' . $page['template'])) {
   include('template/' . $page['template']);
 } else {
-  include('template/default.php');
+  include('template/login.php');
 }
