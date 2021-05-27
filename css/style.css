@@ -111,23 +111,25 @@
 }
 
 #middle {
-  background: #E5FDFC;
+  background: #171D3A;
   display: block;
   flex: auto;
   font-weight: 500;
   order: 2;
   text-align: center;
   width: 1500px;
+  color: white;
 }
 
 #right {
-  background: #E5FDFC;
+  background: #171D3A;
   display: block;
   flex: auto;
   font-weight: 500;
   text-align: right;
   order: 3;
   flex: auto;
+  color: white;
 }
 
 .lefthover:link {
@@ -143,7 +145,7 @@
 }
 
 a:link {
-  color: black;
+  color: white;
   background-color: transparent;
   text-decoration: none;
 }
@@ -155,13 +157,13 @@ a:visited {
 }
 
 a:hover {
-  color: black;
+  color: white;
   background-color: transparent;
   text-decoration: underline;
 }
 
 a:active {
-  color: black;
+  color: yellow;
   background-color: transparent;
   text-decoration: underline;
 }

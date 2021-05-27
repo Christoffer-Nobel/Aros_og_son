@@ -7,8 +7,8 @@
       <h5>Seebladsgade 1</h5>
       <h5>5000 Odense C</h5></div>
       <div id="middle"><h5>Kontakt</h5>
-      <h5><a href="tel:004528566267">+4528566267</a></h5>
-      <h5><a href="mailto:cema@ucl.com">kontakt@arosogsøn.dk</a></h5></div>
+      <h5><a class="lefthover" href="tel:004528566267">+4528566267</a></h5>
+      <h5><a class="lefthover" href="mailto:cema@ucl.com">kontakt@arosogsøn.dk</a></h5></div>
     <div id="right">
       <h5>Aros & Søn ApS er et revisionfirma.</h5>
       <h5>Vi hjælper dig, som vi hjalp</h5>
