@@ -40,7 +40,7 @@ if(mysqli_num_rows($result) > 0){
     <form method="post">
       <input type="textarea" name="notetext" placeholder="Indtast note her...">
       <input type="submit" value="Tilføj note">
-
+    </form>
     <h2> Filer: </h2>
     <form method="post" enctype="multipart/form-data">
       <input type="text" name="filename" placeholder="Titel" required>
