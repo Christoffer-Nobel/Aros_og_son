@@ -34,7 +34,7 @@ if(mysqli_num_rows($result) > 0){
 
   <h2> Noter til kunde: </h2>
     <form method="post">
-      <input type="textarea" name="notetext">
+      <input type="textarea" name="notetext" placeholder="Indtast note her...">
       <input type="submit" value="Tilføj note">
     </form>
 
@@ -71,7 +71,7 @@ if(isset($_POST['notetext'])){
 ?>
 <h2> Filer: </h2>
   <form method="post" enctype="multipart/form-data">
-    <input type="text" name="filename" required>
+    <input type="text" name="filename" placeholder="Titel" required>
     <input type="file" name="file" required>
     <input type="submit" value="Tilføj fil" name="upload">
   </form>

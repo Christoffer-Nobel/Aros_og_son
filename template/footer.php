@@ -11,8 +11,7 @@
       <h5><a class="lefthover" href="mailto:cema@ucl.com">kontakt@arosogsøn.dk</a></h5></div>
     <div id="right">
       <h5>Aros & Søn ApS er et revisionfirma.</h5>
-      <h5>Vi hjælper dig, som vi hjalp</h5>
-      <h5>Britta Nielsen og Stein Bagger.</h5></div>
+    </div>
 </div>
     </header>
 </body>

@@ -266,3 +266,16 @@ td {
    color: #171D3A;
    text-decoration: none;
  }
+.Posts {
+  text-align: center;
+  font-size: 25px;
+}
+#posttitle {
+  font-size: 20px;
+}
+#posttext {
+  font-size: 15px;
+}
+#postdate {
+  font-size: 15px;
+}

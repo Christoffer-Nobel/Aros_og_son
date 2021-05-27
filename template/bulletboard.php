@@ -1,13 +1,13 @@
-<?php include('header.php'); ?>
-  <h2><?php echo $page['title']; ?><h2>
-<?php
+<?php include('header.php');
 global $conn;
 ?>
+<div class="Posts">
+<h2><?php echo $page['title']; ?><h2>
 <h2> Skriv et opslag: </h2>
 <form  method="post">
 <input type="number" name="empid" placeholder="Medarbjeder nr" required> <br>
 <input type="text" name="title" placeholder="Titel" required><br>
-<input type="text" name="posttext" placeholder="Tekst" required>
+<input type="text" name="posttext" placeholder="Tekst" required><br>
 <input type="submit" name="makepost" value="Del"><br> <br>
 </form>
 
@@ -21,12 +21,13 @@ if(mysqli_num_rows($result) > 0){
     $posts[] = $row;
   }
 }
+?><?php
 foreach ($posts as $post) {
-  echo $post['e_firstname'] . " " . $post['e_lastname']; ?> <br> <?php
-  echo $post['title']; ?> <br> <?php
-  echo $post['bulletboard_text']; ?> <br> <?php
-  echo $post['created_at']; ?> <br> <?php
-?> <br> <br> <?php
+  echo $post['title']; ?> <br><a id="posttitle"> <?php
+  echo $post['e_firstname'] . " " . $post['e_lastname'] . " - " . $post['department_name']; ?> </a> <br><a id="posttext"> <?php
+  echo $post['bulletboard_text']; ?> </a><br><a id="postdate"> <?php
+  echo $post['created_at']; ?> </a><br> <?php
+?> <br><br> <?php
 }
 
 if(isset($_POST['makepost'])){
@@ -43,7 +44,7 @@ if(isset($_POST['makepost'])){
 
 }
 ?>
-
+</div>
 
 </body>
 </html>
