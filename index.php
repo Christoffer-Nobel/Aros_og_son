@@ -1,5 +1,5 @@
 <?php
-
+//sætter en forbindelse op til databasen med nedenstående konstanter og connectfunktionen
 define("DBHOST", "localhost");
 define("DBUSER", "root");
 define("DBPASS", "root");
@@ -9,6 +9,7 @@ include("functions.php");
 
 connect();
 
+//hvis ?p= er sat i URLen, tager den data til den side og inkluderer template. Hvis ?t= er sat, gør den det samme bare med kunder. ellers henter den forsiden
 if(isset($_GET["p"])) {
   $page = getPage($_GET["p"]);
 } elseif(isset($_GET["t"])){
@@ -16,7 +17,6 @@ if(isset($_GET["p"])) {
 } else {
   $page = getPage();
 }
-
 
 if($page == false) {
   include('template/404.php');

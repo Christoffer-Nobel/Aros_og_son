@@ -18,7 +18,9 @@
       </div>
     <div id="page">
     <div id="navbar">
-                  <?php foreach(getNav() as $nav) { ?>
+                  <?php
+                  //for hver side i pages tabellen, som er under 5, echo'er vi nav id og titel i et link
+                  foreach(getNav() as $nav) { ?>
                   <li>
                     <a href="?p=<?php echo $nav['id']; ?>">
                       <?php echo $nav['title']; ?>

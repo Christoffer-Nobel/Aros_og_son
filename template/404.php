@@ -1,4 +1,5 @@
 <?php
+//Denne side vises når ?p=x, hvor x er et ukendt pages.id i databasen
 include('./template/header.php')
 
  ?>

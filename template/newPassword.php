@@ -32,7 +32,7 @@ connect();
 <?php
       if(isset($_POST['btnlogin']))
       {
-      //sætter den indskrevne email og password i en variabel
+      //sætter de indskrevne data i en variabler og hasher kodeordet
           $uname = $_POST['email'];
           $oldpass = $_POST['oldpassword'];
           $oldhashpass = hash('ripemd160', $oldpass);
@@ -40,20 +40,20 @@ connect();
           $newpass = hash('ripemd160', $pass);
           $repeatpass = $_POST['repeatpassword'];
 
+          //henter data fra tabellen om emplayees
         $sql = "SELECT * FROM employees";
         global $conn;
         $result = mysqli_query($conn, $sql);
         $users =[];
         if(mysqli_num_rows($result) > 0){
           while($row = mysqli_fetch_assoc($result)){
-            //array_push($products)
             $users[] = $row;
           }
           }
 
             for($i = 0; $i < count($users); $i++){
               $empid = $users[$i]['employee_id'];
-      //tjekker om det indskrevne email og password med vores hash passer med samme data fra hver bruger i vores array indtil den finder et match, og sætter her en variabel til velkommen, og en variabel til brugerens navn
+      //tjekker om det indskrevne email og password passer med samme data fra hver bruger i vores array, enten hvis den er hashet eller ikke hashet (gør det muligt at kopiere den hashede kode for at lave en ny), indtil den finder et match, og sætter her en variabel til velkommen, og en variabel til brugerens navn
               if($users[$i]['e_email'] == $uname && $users[$i]['password'] == $oldpass && $pass == $repeatpass or $users[$i]['e_email'] == $uname && $users[$i]['password'] == $oldhashpass && $pass == $repeatpass)
               {
                 $sql = "UPDATE employees SET password = '$newpass' WHERE employee_id = $empid;";

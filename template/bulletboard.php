@@ -12,6 +12,7 @@ global $conn;
 </form>
 
 <?php
+//henter data om posts i viewet employeeposts, og sorterer det med nyeste først efter created_at
 $sql = "SELECT * from employeeposts where employee_id > 0 ORDER BY created_at DESC;";
 
 $result = mysqli_query($conn, $sql);
@@ -22,6 +23,7 @@ if(mysqli_num_rows($result) > 0){
   }
 }
 ?><?php
+//displayer hver note med de ønskede data
 foreach ($posts as $post) {
   echo $post['title']; ?> <br><div id="posttitle"> <?php
   echo $post['e_firstname'] . " " . $post['e_lastname'] . " - " . $post['department_name']; ?> </div> <br><div id="posttext"> <?php
@@ -29,7 +31,7 @@ foreach ($posts as $post) {
   echo $post['created_at']; ?> </div><br> <?php
 ?> <br><br> <?php
 }
-
+//hvis "makepost" er sat, insættes en ny post i bulletboard tabellen.
 if(isset($_POST['makepost'])){
   $empid = $_POST['empid'];
   $title = $_POST['title'];

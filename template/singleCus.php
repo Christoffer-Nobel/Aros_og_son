@@ -4,6 +4,7 @@
 <?php
 global $conn;
 
+//tager data fra databasen om den bruger hvor ?t= er = kunde IDet, og sætter dataen i et array ($cus). Dataen er fra viewer "customeremployeerelations"
 $pid = $_GET["t"];
 $sql = "SELECT * from customeremployeerelations where customer_id = '$pid'";
 
@@ -15,7 +16,7 @@ if(mysqli_num_rows($result) > 0){
   }
 }
 
-
+//Displayer den ønskede information om kunden
 ?>
 <div id="customerinfo"
 <body>
@@ -51,7 +52,7 @@ if(mysqli_num_rows($result) > 0){
 <div id="customernotes">
   <h2> Noter: </h2>
 <?php
-
+//henter data om noter som tilhører den enkelte kunde, og sorterer det med nyeste først efter created_at
 $sql = "SELECT * from customernotes where customer_id = '$pid' ORDER BY created_at DESC" ;
 
 $result = mysqli_query($conn, $sql);
@@ -60,7 +61,7 @@ if(mysqli_num_rows($result) > 0){
   while($row = mysqli_fetch_assoc($result)){
     $notes[] = $row;
   }
-
+//Displayer hver note til kunden
   foreach ($notes as $singleNote) {
     echo $singleNote["created_at"];
       ?><br> <?php
@@ -68,6 +69,7 @@ if(mysqli_num_rows($result) > 0){
       ?><br> <?php  ?><br> <?php
   }
 }
+//hvis notetext feltet er sat, indsættes den skrevede note i tabellen med noter
 if(isset($_POST['notetext'])){
   $note = $_POST['notetext'];
   $cusId = $cus[0]["customer_id"];

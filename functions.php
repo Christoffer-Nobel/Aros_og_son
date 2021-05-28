@@ -1,7 +1,7 @@
 <?php
 
 $conn = null;
-
+//connect funktion, som i sammenhæng med de definerede konstanter i index skaber forbindelse til vores database
 function connect() {
   global $conn;
 
@@ -13,7 +13,7 @@ function connect() {
 
   mysqli_select_db($conn, DBNAME);
 }
-
+//Tager data fra databasen, fra siden med det id som er = $pid
 function getPage($pid = null) {
   global $conn;
 
@@ -31,6 +31,7 @@ function getPage($pid = null) {
   return false;
 }
 
+//Tager data fra databasens tabel med kunden når $pid er = 6 (altså kundesiden)
 function getCusPage($pid = null) {
   global $conn;
 
@@ -45,7 +46,7 @@ function getCusPage($pid = null) {
   }
   return false;
 }
-
+//henter alle sider fra databasen hvor id er mindre end 5, for at kunne hive dem ud i navbaren
 function getNav() {
   global $conn;
 
