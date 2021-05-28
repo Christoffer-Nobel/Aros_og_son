@@ -1,8 +1,5 @@
 <?php
 
-include("../functions.php");
-
-connect();
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
