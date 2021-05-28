@@ -30,7 +30,7 @@ if(mysqli_num_rows($result) > 0){
   <br><br>
 <?php echo "Rådgivere:" ?> <h3>
   <?php foreach($cus as $emp) {
-    echo $emp["e_firstname"] . " " . $emp["e_lastname"];
+    echo $emp["e_firstname"] . " " . $emp["e_lastname"] . " - " . $emp["e_email"];
       ?> <br> <?php
   }
 ?> </h3>
